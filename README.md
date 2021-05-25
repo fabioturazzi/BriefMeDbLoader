@@ -66,4 +66,4 @@ There are several alternatives that we believe would improve the performance by 
 
 Most of the problems can be ameliorated by utilizing stronger computational resources, which have enough power to accelerate the execution time and handle heavy processing demands. The best alternative for this would be using distributed file systems such as Hadoop and Spark for an official deployment. 
 
-Additionally, retraining the model with a customized dataset has to potential to improve summary qualities. This future step would require a large process of data generation and high computational power. 
+Additionally, retraining the model with a customized dataset has the potential to improve summary qualities. This future step would require a large process of data generation and high computational power. 

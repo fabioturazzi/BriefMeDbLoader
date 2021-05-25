@@ -55,11 +55,9 @@ Its three main funtions are: scraping news articles from news websites using cus
 ```
 
 ## Challenges:
-Considering the large amount of articles (about 400 articles), applying BART summarization on all of them systematically is extremely time-consuming, thus, is not desirable for the scope of our project. As the result, we excluded some scraping scripts and put a cap on the number of articles in order to alleviate the updating time.  
+Considering the large amount of articles (about 400 articles), applying BART summarization on all of them systematically is extremely time-consuming, thus, is not desirable for the scope of our project. As the result, we opted to limit the scope of the project to a smaller sample of sources and articles. The unconstrained code is already developed and can be easily implemented to run the project in a more capable setting, such as a distributed file system. 
 
-While attempting to re-train the pre-trained BART model, we encountered the limited processing power issue given the complexity of the text generation algorithm and the large volume of articles. In order to preserve summary qualities, we opted to limit the scope of the project to a smaller sample of sources and articles. The unconstrained code is already developed and can be easily implemented to run the project in a more capable setting, such as a distributed file system. 
-
-We have experimented with multiple summarization algorithms, including retraining existing versions to compare performance. Details of our testing process and metrics used can be found on the project report. The configuration which rendered best results was the pre-trained model [BART](https://huggingface.co/facebook/bart-large-cnn).
+We have also experimented with multiple summarization techniques, including retraining existing text generators and combining algorithms to compare performance. Details of our testing process and metrics used can be found on the project report. The configuration which rendered best results for this project was the pre-trained model [BART](https://huggingface.co/facebook/bart-large-cnn).
 
 Another consideration during the research for deployment the Pycharm project involved running an EC2 instance on AWS to deploy the database loader and maintain articles updated. By using [AWS toolkit](https://aws.amazon.com/pycharm/) extension for Pycharm, we were able to connect to a running EC2 instance, upload all the files and download the requirements to the remote machine. Although the free-tier machine could not handle the task due to RAM limitations, the project is currently deployed and ready for execution. 
 
